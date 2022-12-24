@@ -9,19 +9,6 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-.header {
-  height: 100vh;
-  min-height: 600px;
-  max-height: 756px;
-  /* выше установили ограничения для секции */
-}
-
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
-.header__square-pic {
-  height: 568px;
-  width: 568px;
-}
-
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   width: 200px;
@@ -29,3 +16,338 @@
   margin-right: 0;
   margin-top: 80px;
 }
+
+.header {
+  height: 100vh;
+  min-height: 600px;
+  max-height: 756px;
+  background-color: #f2f2f2;
+  margin-bottom: 100px;
+  display: flex; /* необходимо для позиционирования header__title в середине */
+  position: relative; /* необходимо для того, чтобы элементы с абсолютным позиционированием не позиционировались от старшего родителя т.е от body */
+}
+
+.link {
+  text-decoration: none;
+}
+
+.header__logo {
+  background-image: url("../images/logo_place_header.svg");
+  width: 228px;
+  height: 32px;
+}
+
+.header__logo_place {
+  position: absolute;
+  top: 30px;
+  left: 64px;
+}
+
+.header__title {
+  color: #000;
+  display: flex;
+  width: 730px;
+  margin-left: 64px;
+  font-size: 102px;
+  line-height: 96px;
+  font-weight: 600;
+  align-self: center;
+  z-index: 3;
+}
+
+.header__subtitle {
+  color: #000;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  width: 388px;
+  bottom: 30px;
+  left: 64px;
+  z-index: 3;
+}
+
+.header__main-illustration {
+  background-size: cover;
+  width: 765px;
+  height: 608px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin: 0;
+  z-index: 2;
+}
+
+.header__square-pic {
+  height: 568px;
+  width: 568px;
+  background-color: #2f80ed;
+  position: absolute;
+  right: 0px;
+  top: 64px;
+  z-index: 1;
+}
+
+.description {
+  margin-bottom: 100px;
+  display: flex; /*чтобы отцентровать two-columns вдоль оси OX*/
+  justify-content: center;
+}
+
+.two-columns {
+  width: 80%;
+  min-width: 784px;
+  height: 100%;
+  display: flex; /*чтобы добавить пробелы между столбцами*/
+  justify-content: space-between;
+  align-items: stretch; /**/
+}
+
+.two-columns__brief {
+  color: #2f80ed;
+  width: 175px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
+}
+
+.two-columns__paragraph {
+  color: #000;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  margin-bottom: 30px; /*чтобы после каждого абзаца был отступ в 30 пикселей*/
+}
+
+.two-columns__span-accent {
+  color: #000;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.digits__title {
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 600;
+  color: #000;
+  width: 60%;
+  margin-bottom: 20px;
+  text-align: center;
+  margin: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.digits__subtitle {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  color: #000;
+  width: 60%;
+  margin-bottom: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.digits__table {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  width: 1100px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.table__cell {
+  width: 250px;
+  margin-top: 60px;
+}
+
+.table__cell_heading {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+}
+
+.table__cell_text {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  color: #000;
+}
+
+.feynman {
+  height: 890px;
+  position: relative;
+  margin-top: 100px;
+}
+
+.feynman__title {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+  text-align: center;
+  width: 648px;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: 600;
+}
+
+.feynman__subtitle {
+  display: block;
+  text-align: center;
+  margin-top: 70px;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+}
+
+.feynman__link {
+  position: absolute;
+  right: 48px;
+  top: 50%;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  color: #2f80ed;
+}
+
+.feynman__image {
+  position: absolute;
+  bottom: 0;
+  left: 0
+  width: 867px;
+  height: 637px;
+  z-index: -1;
+}
+
+.kaufman {
+  position: relative;
+  overflow: hidden;
+  background-color: #1f1f1f;
+  z-index: -1;
+  padding-bottom: 90px;
+}
+
+.kaufman__dark-section-title {
+  color: white;
+  width: 60%;
+  margin-top: 90px;
+}
+
+.kaufman__dark-section-subtitle {
+  color: white;
+  width: 60%;
+}
+
+.kaufman__dark-table {
+
+  display: flex;
+  z-index: 1;
+}
+
+.table__dark-cell {
+  margin-top: 80px;
+  width: 200px;
+}
+
+.table__dark-cell_heading {
+  color: white;
+}
+
+.table__dark-cell_text {
+  color: white;
+  margin-bottom: 0;
+}
+
+.kaufman__triangle {
+  position: absolute;
+  right: -210px;
+  top: 0;
+  width: 877px;
+  height: 877px;
+  z-index: -1;
+  background-size: cover;
+
+}
+
+.footer {
+  min-height: 350px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  background-color: #1f1f1f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__columns {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+
+.column__content_copyright {
+  flex-basis: 711px;
+  position: relative;
+}
+
+.footer__logo_place {
+  width: 228px;
+  height: 32px;
+  background-image: url(../images/logo_place_footer.svg);
+}
+
+.footer__author {
+  margin-top: 18px;
+  margin-bottom: 18px;
+  color: white;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  bottom: 0px;
+}
+
+.menu__heading {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.menu__text {
+  color: white;
+  margin-bottom: 16px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.menu__image {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.menu__link {
+  color: white;
+}
+
