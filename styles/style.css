@@ -9,35 +9,23 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
-  width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
-}
-
 .header {
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
   background-color: #f2f2f2;
-  margin-bottom: 100px;
+  margin-bottom: 100px;/*отступ между блоком заголовка и блоком главные проблемы в обучении*/
   display: flex; /* необходимо для позиционирования header__title в середине */
   position: relative; /* необходимо для того, чтобы элементы с абсолютным позиционированием не позиционировались от старшего родителя т.е от body */
 }
 
-.link {
-  text-decoration: none;
-}
-
-.header__logo {
+.logo {
   background-image: url("../images/logo_place_header.svg");
   width: 228px;
   height: 32px;
 }
 
-.header__logo_place {
+.logo_place_header {
   position: absolute;
   top: 30px;
   left: 64px;
@@ -48,6 +36,8 @@
   display: flex;
   width: 730px;
   margin-left: 64px;
+  margin-top: 0; /*обнуление нижнего и верхнего марджина для h1*/
+  margin-bottom: 0;
   font-size: 102px;
   line-height: 96px;
   font-weight: 600;
@@ -65,6 +55,11 @@
   bottom: 30px;
   left: 64px;
   z-index: 3;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #2f80ed;
 }
 
 .header__main-illustration {
@@ -89,18 +84,16 @@
 }
 
 .description {
-  margin-bottom: 100px;
+  margin-bottom: 100px; /*отступ между блоком главные проблемы в обучении и цифры и факты*/
   display: flex; /*чтобы отцентровать two-columns вдоль оси OX*/
   justify-content: center;
 }
 
 .two-columns {
   width: 80%;
-  min-width: 784px;
-  height: 100%;
   display: flex; /*чтобы добавить пробелы между столбцами*/
   justify-content: space-between;
-  align-items: stretch; /**/
+  align-items: stretch;
 }
 
 .two-columns__brief {
@@ -109,6 +102,7 @@
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
+  margin: 0; /*обнуление отступов h2*/
 }
 
 .two-columns__main-text {
@@ -121,7 +115,12 @@
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
-  margin-bottom: 30px; /*чтобы после каждого абзаца был отступ в 30 пикселей*/
+  margin-bottom: 30px; /*чтобы между абзацами был отступ в 30px*/
+  margin-top: 0;
+}
+
+.two-columns__paragraph:last-child {
+  margin-bottom: 0; /*обнуление отступа последнего наследника класса*/
 }
 
 .two-columns__span-accent {
@@ -131,7 +130,11 @@
   font-weight: 600;
 }
 
-.digits__title {
+.digits {
+  margin-bottom: 100px; /*отступ между блоком цифры и факты и метод фейнмана*/
+}
+
+.section-title {
   line-height: 1.15;
   font-size: 60px;
   font-weight: 600;
@@ -139,18 +142,20 @@
   width: 60%;
   margin-bottom: 20px;
   text-align: center;
-  margin: 0;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: 0;/*обнуление отступов h2*/
 }
 
-.digits__subtitle {
+.section-subtitle {
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
   color: #000;
   width: 60%;
+  margin-top: 0;/*обнуление отступов h3*/
   margin-bottom: 0;
   display: block;
   margin-left: auto;
@@ -158,11 +163,10 @@
   text-align: center;
 }
 
-.digits__table {
+.table {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 100px;
   width: 1100px;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -173,15 +177,17 @@
   margin-top: 60px;
 }
 
-.table__cell_heading {
+.table__heading {
   line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
   color: #000;
+  margin-bottom: 0;/*обнуление отступов h2*/
+  margin-top: 0;
 }
 
-.table__cell_text {
-  margin-bottom: 20px;
+.table__text {
+  margin-bottom: 20px; /*p в исправлении не нуждаются*/
   margin-top: 20px;
   line-height: 1.2;
   font-size: 18px;
@@ -189,31 +195,41 @@
   color: #000;
 }
 
+.table__text:last-child {
+  margin-bottom: 0; /*обнуление отступов у последних наследников*/
+}
+
 .feynman {
-  height: 890px;
+  min-height: 890px;
   position: relative;
-  margin-top: 100px;
+  background-color: #f2f2f2;
+  z-index: 0;
 }
 
 .feynman__title {
   display: block;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 100px;
   text-align: center;
   width: 648px;
   line-height: 1.15;
   font-size: 120px;
   font-weight: 600;
+  margin-top: 0;
+  z-index: 2;
+  position: relative; /*относительное позиционирование в блоках необходимо для использования z-индексов*/
+  top: 100px;
 }
 
 .feynman__subtitle {
   display: block;
   text-align: center;
-  margin-top: 70px;
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
+  z-index: 2;
+  position: relative;
+  top: 70px;
 }
 
 .feynman__link {
@@ -224,6 +240,7 @@
   font-size: 36px;
   font-weight: normal;
   color: #2f80ed;
+  text-decoration: none;
 }
 
 .feynman__image {
@@ -232,46 +249,50 @@
   left: 0;
   width: 867px;
   height: 637px;
-  z-index: -1;
+  z-index: 1;
+  display: block;
 }
 
 .kaufman {
   position: relative;
   overflow: hidden;
   background-color: #1f1f1f;
-  z-index: -1;
-  padding-bottom: 90px;
+  padding-bottom: 90px; /*промежуток между принципы обучения и footer*/
 }
 
-.kaufman__dark-section-title {
-  color: white;
+.section-title_theme_dark {
+  color: white; /*отступ в 20px между заголовком и подзаголовком, а также обнуление h2 есть в section-title*/
   width: 60%;
-  margin-top: 90px;
+  margin-top: 90px;/*отступ между заголовком и верхней границей кауфман*/
+  position: relative;
+  z-index: 3; /*есть вероятность, что треугольник закроет заголовок*/
 }
 
-.kaufman__dark-section-subtitle {
-  color: white;
+.section-subtitle_theme_dark {
+  color: white; /*отступ в 20px между заголовком и подзаголовком, а также обнуление h3 есть в section-title*/
   width: 60%;
 }
 
-.kaufman__dark-table {
-
+.table_theme_dark {
   display: flex;
-  z-index: 1;
 }
 
-.table__dark-cell {
-  margin-top: 80px;
+.table__cell_theme_dark {
   width: 200px;
+  color: white;
+  margin-right: 0;
+  margin-top: 80px;
+  z-index: 3;
 }
 
-.table__dark-cell_heading {
-  color: white;
+.table__heading_theme_dark {
+  color: white; /*h2 отступы исправлены в table__heading*/
 }
 
-.table__dark-cell_text {
+.table__text_theme_dark {
   color: white;
-  margin-bottom: 0;
+  margin-bottom: 0; /*исправление заголовков p*/
+  margin-top: 0;
 }
 
 .kaufman__triangle {
@@ -280,19 +301,20 @@
   top: 0;
   width: 877px;
   height: 877px;
-  z-index: -1;
+  z-index: 1;
   background-size: cover;
+  background-image: url("../images/kaufman-triangle.svg");
 
 }
 
 .footer {
   min-height: 350px;
-  padding-top: 60px;
-  padding-bottom: 40px;
+  padding-top: 60px; /*дополнительный отступ между принципы обучения и footer как указано в брифе*/
+  padding-bottom: 40px; /*отступ между footer и концом страницы*/
   background-color: #1f1f1f;
   display: flex;
-  align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .footer__columns {
@@ -301,12 +323,15 @@
   justify-content: space-between;
 }
 
-.column__content_copyright {
+.footer__column_content_copyright {
+  display: flex;
   flex-basis: 711px;
-  position: relative;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: column;
 }
 
-.footer__logo_place {
+.logo_place_footer {
   width: 228px;
   height: 32px;
   background-image: url(../images/logo_place_footer.svg);
@@ -319,26 +344,31 @@
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
-  position: absolute;
-  bottom: 0px;
 }
 
-.menu__heading {
+.footer__column_heading {
   color: white;
-  display: flex;
-  flex-direction: column;
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 18px;
   line-height: 30px;
+  margin-top: 0; /*обнуление отступов заголовка*/
 }
 
-.menu__text {
+.footer__column_link {
   color: white;
   margin-bottom: 16px;
   font-weight: normal;
   font-size: 18px;
   line-height: 30px;
+  margin-top: 0;
+  display: block;
+  text-decoration: none;
+  margin: 0;
+}
+
+.footer__column_link:last-child {
+  margin-bottom: 16px; /*отступ от последнего наследника ссылок, как указано в брифинге*/
 }
 
 .menu__image {
@@ -346,8 +376,3 @@
   height: 16px;
   margin-right: 10px;
 }
-
-.menu__link {
-  color: white;
-}
-
