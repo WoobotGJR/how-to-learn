@@ -1,0 +1,9 @@
+.footer {
+  min-height: 350px;
+  padding-top: 60px; /*дополнительный отступ между принципы обучения и footer как указано в брифе*/
+  padding-bottom: 40px; /*отступ между footer и концом страницы*/
+  background-color: #1f1f1f;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}

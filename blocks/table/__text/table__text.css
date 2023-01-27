@@ -1,0 +1,12 @@
+.table__text {
+  margin-bottom: 20px; /*p в исправлении не нуждаются*/
+  margin-top: 0;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  color: #000;
+}
+
+.table__text:last-child {
+  margin-bottom: 0; /*обнуление отступов у последних наследников*/
+}

@@ -1,0 +1,13 @@
+@import url(../../rotation/rotation.css);
+
+.kaufman__triangle {
+  position: absolute;
+  right: -210px;
+  top: 0;
+  width: 877px;
+  height: 877px;
+  z-index: 1;
+  background-size: cover;
+  background-image: url("../../../images/kaufman-triangle.svg");
+  animation: rotate 20s infinite forwards linear 0s; /*бесконечная линейная прямая анимация поворота в 20 секунд с нулевой задержкой*/
+}

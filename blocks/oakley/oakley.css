@@ -1,0 +1,10 @@
+.oakley  {
+  display: flex; /*чтобы отцентровать two-columns вдоль оси OX*/
+  justify-content: center; /*выравнивание блоков по центру*/
+  padding-top: 160px;
+  margin-bottom: 0;
+  transform: translateY(-60px); /*по брифингу необходимо, чтобы секция Уокли была поверх секции выше*/
+  background-color: #f2f2f2;
+  position: relative; /*Фон секции Уокли не должен быть поверх видео*/
+  z-index: 2; /*Фон секции Уокли не должен быть поверх видео*/
+}

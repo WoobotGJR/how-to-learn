@@ -1,0 +1,13 @@
+.header__title {
+  color: #000;
+  display: flex;
+  width: 730px;
+  margin-left: 64px;
+  margin-top: 0; /*обнуление нижнего и верхнего марджина для h1*/
+  margin-bottom: 0;
+  font-size: 102px;
+  line-height: 96px;
+  font-weight: 600;
+  align-self: center;
+  z-index: 3;
+}

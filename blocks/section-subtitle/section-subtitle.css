@@ -1,0 +1,13 @@
+.section-subtitle {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  color: #000;
+  width: 60%;
+  margin-top: 0;/*обнуление отступов h3*/
+  margin-bottom: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}

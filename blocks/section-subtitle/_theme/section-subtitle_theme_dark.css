@@ -1,0 +1,6 @@
+.section-subtitle_theme_dark {
+  color: white; /*отступ в 20px между заголовком и подзаголовком, а также обнуление h3 есть в section-title*/
+  width: 60%;
+  z-index: 3;
+  position: relative; /*есть вероятность, что треугольник закроет подзаголовок*/
+}

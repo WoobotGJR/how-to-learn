@@ -1,0 +1,8 @@
+.table__heading {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+  margin-top: 0; /*обнуление отступов h3 или h4*/
+}

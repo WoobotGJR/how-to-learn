@@ -1,0 +1,5 @@
+.description {
+  margin-bottom: 100px; /*отступ между блоком главные проблемы в обучении и цифры и факты*/
+  display: flex; /*чтобы отцентровать two-columns вдоль оси OX*/
+  justify-content: center;
+}

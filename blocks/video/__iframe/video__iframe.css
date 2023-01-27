@@ -1,0 +1,7 @@
+.video__iframe {
+  margin-top: 50px;
+  width: 515px;
+  height: 316px;
+  border-radius: 0; /*исправления ошибок валидатора, связанных с указанием свойств iframe элементов в html файле*/
+  border-style: none;
+}

@@ -1,0 +1,12 @@
+.two-columns__paragraph {
+  color: #000;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  margin-bottom: 30px; /*чтобы между абзацами был отступ в 30px*/
+  margin-top: 0;
+}
+
+.two-columns__paragraph:last-child {
+  margin-bottom: 0; /*обнуление отступа последнего наследника класса*/
+}
