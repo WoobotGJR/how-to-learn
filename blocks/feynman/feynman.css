@@ -3,6 +3,5 @@
   position: relative;
   background-color: #f2f2f2;
   z-index: 0;
-  margin-top: -60px; /*отступ необходимый, чтобы убрать зазор от transform translateY у блока Уокли*/
   margin-bottom: 100px;
 }
