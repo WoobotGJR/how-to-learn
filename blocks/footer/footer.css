@@ -1,9 +1,22 @@
 .footer {
-  min-height: 350px;
-  padding-top: 60px; /*дополнительный отступ между принципы обучения и footer как указано в брифе*/
-  padding-bottom: 40px; /*отступ между footer и концом страницы*/
-  background-color: #1f1f1f;
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	max-width: calc(100% - 96px);
+	margin: 0 auto;
+	padding-bottom: 24px;
+	font-family: "Inter", "Arial", "Helvetica", sans-serif;
+}
+
+@media screen and (max-width: 932px) {
+	.footer {
+		max-width: calc(100% - 48px);
+	}
+}
+
+@media screen and (max-width: 610px) {
+	.footer {
+		flex-direction: column;
+		max-width: calc(100% - 100px);
+		margin: 0 0 0 16px;
+	}
 }
